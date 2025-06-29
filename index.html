@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center style="position: fixed; top: 0 ; left: 50%; transform: translateX(-50%);"><h1>Calculator</h1></center>
+    <div class="container">
+     <input id="input" type="text">
+     <div class="one">
+        <div class="plus" onclick="add('+')">+</div>
+        <div class="num1 number" onclick="add(1)" >1</div>
+        <div class="num2 number" onclick="add(2)">2</div>
+        <div class="num3 number" onclick="add(3)">3</div>
+     </div>
+     <div class="two">
+        <div class="moins" onclick="add('-')">-</div>
+        <div class="num4 number" onclick="add(4)">4</div>
+        <div class="num5 number"onclick="add(5)">5</div>
+        <div class="num6 number" onclick="add(6)">6</div>
+     </div>
+     <div class="three">
+        <div class="fois" onclick="add('*')">*</div>
+        <div class="num7 number" onclick="add(7)">7</div>
+        <div class="num8 number" onclick="add(8)">8</div>
+        <div class="num9 number" onclick="add(9)">9</div>
+     </div>
+     <div class="for">
+        <div class="devision" onclick="add('/')">/</div>
+        <div class="num0 number" onclick="add(0)">0</div>
+        <div class="point" onclick="add('.')">.</div>
+        <div class="equal" onclick="result()">=</div>
+     </div>
+     <div class="for1">
+        <div class="delete" onclick="remove()">C</div>
+       
+     </div>
+    </div>
+
+
+    <script src="main.js" ></script>
+</body>
+<style>
+    .delete{
+        position: fixed;
+        width: 100px;
+        margin-left : 100px;
+    }
+    body{
+        width: 100vw;
+        height: 100vh;
+    }
+    .container{
+        width: 50%;
+        height: 70%;
+        margin: auto ;
+        padding: 20px;
+        background-image: linear-gradient(to left top , rgb(159, 75, 75) , rgb(81, 81, 149) );
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        border-radius: 8px;
+        }
+
+   .container > div{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    
+   }
+
+   .container input{
+    width: 100%;
+    margin:  0 auto;
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    margin-bottom: 10px;
+   }
+
+   .container div > div{
+    background-color: blanchedalmond;
+    width: 80px;
+    text-align: center;
+    padding: 20px;
+    margin: 2px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all .3s linear;
+   }
+   .container div > div:hover{
+    background-color: rgb(149, 129, 104);
+   }
+   .three {
+    display: none;
+   }
+
+   .plus , .moins , .fois , .devision{
+    background-color: rgb(125, 177, 72) !important;
+    transition: all .3s linear;
+   }
+   .plus:hover , .moins:hover , .fois:hover , .devision:hover{
+    background-color: rgb(65, 118, 117) !important;
+   }
+</style>
+</html>
